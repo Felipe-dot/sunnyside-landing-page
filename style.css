@@ -1,0 +1,80 @@
+:root {
+  /* Primary */
+  --soft-red: hsl(7, 99%, 70%);
+  --yellow: hsl(51, 100%, 49%);
+  --dark-cyan: hsl(167, 40%, 24%);
+  --dark-blue: hsl(198, 62%, 26%);
+  --dark-moderate-cyan: hsl(168, 34%, 41%);
+
+  /* Neutral */
+  --very-dark-desaturated-blue: hsl(212, 27%, 19%);
+  --very-dark-grayish-blue: hsl(213, 9%, 39%);
+  --dark-grayish-blue: hsl(232, 10%, 55%);
+  --grayish-blue: hsl(210, 4%, 67%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  height: 600px;
+  background-image: url("images/desktop/image-header.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+header .nav-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+header .menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 300px;
+  font-weight: 600;
+
+  color: var(--white);
+}
+
+header .menu > button {
+  width: 80px;
+  padding: 10px;
+  border: none;
+  font-weight: 600;
+  border-radius: 1rem;
+  color: var(--very-dark-desaturated-blue);
+}
+
+header .mid-header {
+  color: var(--white);
+  font-weight: 700;
+  position: relative;
+  bottom: 200px;
+}
+
+header .mid-header > h1 {
+  position: relative;
+
+  bottom: 150px;
+}
+
+header .icon-arrow-down > img {
+  position: relative;
+  bottom: 20px;
+  margin-top: 20px;
+  height: 80px;
+}
