@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap");
+
 :root {
   /* Primary */
   --soft-red: hsl(7, 99%, 70%);
@@ -46,8 +48,15 @@ header .menu {
   width: 100%;
   max-width: 300px;
   font-weight: 600;
+}
 
+header .menu p {
+  margin-right: 15px;
+}
+
+header .menu a {
   color: var(--white);
+  text-decoration: none;
 }
 
 header .menu > button {
@@ -56,6 +65,7 @@ header .menu > button {
   border: none;
   font-weight: 600;
   border-radius: 1rem;
+  cursor: pointer;
   color: var(--very-dark-desaturated-blue);
 }
 
@@ -67,8 +77,11 @@ header .mid-header {
 }
 
 header .mid-header > h1 {
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+  letter-spacing: 0.8rem;
+  font-size: 40px;
   position: relative;
-
   bottom: 150px;
 }
 
@@ -77,4 +90,125 @@ header .icon-arrow-down > img {
   bottom: 20px;
   margin-top: 20px;
   height: 80px;
+}
+
+.hero-section {
+  display: flex;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  max-width: 500px;
+  padding: 10px;
+}
+
+.content h1 {
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+  font-size: 40px;
+  color: var(--very-dark-desaturated-blue);
+}
+
+.content p {
+  color: var(--very-dark-grayish-blue);
+}
+
+.content a {
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  color: var(--very-dark-desaturated-blue);
+  text-decoration: none;
+}
+
+.content h1,
+.content p,
+.content a {
+  margin-bottom: 20px;
+}
+
+.hero-image-egg {
+  height: 600px;
+  background-image: url("images/desktop/image-transform.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#first-learn {
+  text-decoration: none;
+  border-bottom: 2px solid var(--yellow);
+}
+
+#second-learn {
+  text-decoration: none;
+  border-bottom: 2px solid var(--soft-red);
+}
+
+.hero-image-glass {
+  height: 600px;
+  background-image: url("images/desktop/image-stand-out.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero-image-egg,
+.hero-image-glass {
+  flex: 1;
+}
+
+.graphic-design {
+  background-image: url("images/desktop/image-graphic-design.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+}
+
+.photography {
+  height: 600px;
+  background-image: url("images/desktop/image-photography.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+}
+
+.img-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 350px;
+}
+
+.img-content h1 {
+  font-family: "Fraunces", sans-serif;
+  font-weight: 700;
+  color: var(--dark-cyan);
+}
+
+.img-content p {
+  color: var(--very-dark-desaturated-blue);
+}
+
+.img-content h1,
+.img-content p {
+  margin-bottom: 50px;
 }
