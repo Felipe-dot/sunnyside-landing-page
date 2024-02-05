@@ -41,7 +41,7 @@ header .nav-menu {
   padding: 10px 20px;
 }
 
-header .menu {
+.menu {
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -54,7 +54,7 @@ header .menu p {
   margin-right: 15px;
 }
 
-header .menu a {
+a {
   color: var(--white);
   text-decoration: none;
 }
@@ -276,4 +276,74 @@ header .icon-arrow-down > img {
 .client-name p:nth-child(2) {
   font-family: "Fraunces", sans-serif;
   color: var(--dark-grayish-blue);
+}
+
+.images-section {
+  display: flex;
+  flex-direction: row;
+}
+
+.images-section div {
+  height: 600px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex: 1;
+}
+
+.images-section div:nth-child(1) {
+  background-image: url("images/desktop/image-gallery-milkbottles.jpg");
+}
+
+.images-section div:nth-child(2) {
+  background-image: url("images/desktop/image-gallery-orange.jpg");
+}
+
+.images-section div:nth-child(3) {
+  background-image: url("images/desktop/image-gallery-cone.jpg");
+}
+
+.images-section div:nth-child(4) {
+  background-image: url("images/desktop/image-gallery-sugarcubes.jpg");
+}
+
+footer {
+  height: 260px;
+  background-color: var(--dark-moderate-cyan);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+footer h2 {
+  font-family: "Fraunces", sans-serif;
+  font-weight: 900;
+  color: var(--very-dark-desaturated-blue);
+}
+
+footer .menu {
+  max-width: 250px;
+  justify-content: space-around;
+}
+
+footer .menu a {
+  font-family: "Barlow", sans-serif;
+  color: var(--dark-cyan);
+}
+
+footer .social-medias a {
+  margin: 0px 5px;
+}
+
+.attribution {
+  background-color: var(--dark-moderate-cyan);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.attribution a {
+  color: var(--very-dark-desaturated-blue);
+  margin: 0px 5px;
 }
