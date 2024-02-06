@@ -26,16 +26,19 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  font-size: 18px;
+  font-family: "Barlow", sans-serif;
+  /* overflow-x: hidden; */
+}
+
 header {
-  height: 600px;
+  height: 100vh;
   background-image: url("images/desktop/image-header.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 header .nav-menu {
@@ -73,28 +76,18 @@ header .menu > button {
   color: var(--very-dark-desaturated-blue);
 }
 
-header .mid-header {
+header h1 {
   color: var(--white);
-  font-weight: 700;
-  position: relative;
-  bottom: 200px;
-}
-
-header .mid-header > h1 {
   font-family: "Fraunces", serif;
-  font-weight: 700;
+  font-weight: 900;
   letter-spacing: 0.8rem;
   font-size: 40px;
+  top: 200px;
   position: relative;
-  bottom: 150px;
-}
-
-.mid-header h1 {
   overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: 0.15em solid var(--soft-red); /* The typwriter cursor */
+  border-right: 0.12em solid var(--soft-red); /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  /* letter-spacing: 0.15em; Adjust as needed */
   max-width: 630px;
   animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
 }
@@ -116,11 +109,13 @@ header .mid-header > h1 {
     border-color: transparent;
   }
   50% {
-    border-color: var(--soft-red);
+    border-color: var(--white);
   }
 }
 
 header .icon-arrow-down {
+  top: 300px;
+
   position: relative;
   cursor: pointer;
   animation: moveUpAndDown 2s ease-in-out infinite;
@@ -141,6 +136,8 @@ header .icon-arrow-down > img {
   bottom: 20px;
   margin-top: 20px;
   height: 80px;
+  max-width: 36px;
+  width: 100%;
 }
 
 .hero-section {
@@ -397,4 +394,90 @@ footer .social-medias a {
 .attribution a {
   color: var(--very-dark-desaturated-blue);
   margin: 0px 5px;
+}
+
+/* For typical mobile devices */
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+  header {
+    background-image: url("images/mobile/image-header.jpg");
+  }
+
+  .nav-menu img,
+  .menu {
+    display: none;
+  }
+
+  header h1 {
+    font-size: 30px;
+    word-wrap: break-word;
+    border-right: none;
+    overflow: visible;
+    animation: initial;
+    white-space: initial;
+  }
+
+  header .icon-arrow-down > img {
+    height: 90px;
+  }
+
+  .hero-section {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  section:nth-child(2),
+  section:nth-child(3) {
+    flex-direction: column;
+  }
+
+  .hero-image-egg,
+  .hero-image-glass,
+  .graphic-design,
+  .photography {
+    flex: initial;
+    height: 400px;
+  }
+
+  .hero-image-egg {
+    background-image: url("images/mobile/image-transform.jpg");
+  }
+
+  .hero-image-glass {
+    background-image: url("images/mobile/image-stand-out.jpg");
+  }
+
+  .graphic-design {
+    height: 600px;
+    background-image: url("images/mobile/image-graphic-design.jpg");
+  }
+
+  .photography {
+    height: 600px;
+    background-image: url("images/mobile/image-photography.jpg");
+  }
+}
+
+/* For mobile (landscap e) */
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+}
+
+/* For tablet */
+
+@media only screen and (min-width: 768px) and (max-width: 979px) {
+}
+
+/* For small desktop */
+
+@media only screen and (min-width: 980px) and (max-width: 1023px) {
+}
+
+/* For typical desktop */
+
+@media only screen and (min-width: 1024px) and (max-width: 1199px) {
+}
+
+/* For large desktop */
+
+@media only screen and (min-width: 1200px) {
 }
