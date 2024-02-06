@@ -22,6 +22,10 @@
   margin: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 header {
   height: 600px;
   background-image: url("images/desktop/image-header.jpg");
@@ -85,6 +89,53 @@ header .mid-header > h1 {
   bottom: 150px;
 }
 
+.mid-header h1 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid var(--soft-red); /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  /* letter-spacing: 0.15em; Adjust as needed */
+  max-width: 630px;
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: var(--soft-red);
+  }
+}
+
+header .icon-arrow-down {
+  position: relative;
+  cursor: pointer;
+  animation: moveUpAndDown 2s ease-in-out infinite;
+}
+
+@keyframes moveUpAndDown {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-40px);
+  }
+}
+
 header .icon-arrow-down > img {
   position: relative;
   bottom: 20px;
@@ -108,7 +159,7 @@ header .icon-arrow-down > img {
   flex-direction: column;
   align-items: start;
   max-width: 500px;
-  padding: 10px;
+  padding: 20px;
 }
 
 .content h1 {
