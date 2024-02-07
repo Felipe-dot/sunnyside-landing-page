@@ -32,6 +32,10 @@ body {
   /* overflow-x: hidden; */
 }
 
+li {
+  list-style-type: none;
+}
+
 header {
   height: 100vh;
   background-image: url("images/desktop/image-header.jpg");
@@ -55,6 +59,54 @@ header .nav-menu {
   width: 100%;
   max-width: 300px;
   font-weight: 600;
+}
+
+.hamburguer-icon {
+  width: 25px;
+  height: 25px;
+  background-image: url("images/icon-hamburger.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.mobile-menu {
+  right: 0;
+  margin-right: 20px;
+  position: absolute;
+  margin-left: auto;
+  width: 280px;
+  height: 220px;
+  padding: 10px;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  z-index: 1000;
+  transition: ease-in 0.2s;
+}
+.hamburguer-icon,
+.mobile-menu {
+  display: none;
+}
+
+.mobile-menu a {
+  color: var(--very-dark-grayish-blue);
+}
+
+.mobile-menu li > button {
+  width: 100px;
+  padding: 15px;
+  border: none;
+  font-weight: 600;
+  border-radius: 1rem;
+  cursor: pointer;
+  background-color: var(--yellow);
+  color: var(--dark-cyan);
+  font-family: "Fraunces", serif;
+  font-weight: 900;
+  font-size: 15px;
 }
 
 header .menu p {
@@ -88,7 +140,6 @@ header h1 {
   border-right: 0.12em solid var(--soft-red); /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  max-width: 630px;
   animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
 }
 
@@ -99,6 +150,7 @@ header h1 {
   }
   to {
     width: 100%;
+    border-right: none;
   }
 }
 
@@ -293,7 +345,7 @@ header .icon-arrow-down > img {
   justify-content: space-around;
   max-width: 500px;
   height: 350px;
-  padding: 20px;
+  /* padding: 20px;  ALERT STYLE */
   text-align: center;
 }
 
@@ -402,9 +454,13 @@ footer .social-medias a {
     background-image: url("images/mobile/image-header.jpg");
   }
 
-  .nav-menu img,
   .menu {
     display: none;
+  }
+
+  .hamburguer-icon,
+  .mobile-menu {
+    display: flex;
   }
 
   header h1 {
@@ -414,6 +470,10 @@ footer .social-medias a {
     overflow: visible;
     animation: initial;
     white-space: initial;
+  }
+
+  header .nav-menu {
+    padding: 15px 20px;
   }
 
   header .icon-arrow-down > img {
