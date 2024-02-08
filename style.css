@@ -473,7 +473,6 @@ footer .social-medias a img:hover {
   header h1 {
     font-size: 30px;
     word-wrap: break-word;
-    border-right: none;
     overflow: visible;
     animation: initial;
     white-space: initial;
@@ -590,27 +589,156 @@ footer .social-medias a img:hover {
   }
 }
 
-/* For mobile (landscap e) */
+/* For mobile (landscape) */
 
 @media only screen and (min-width: 480px) and (max-width: 767px) {
+  header {
+    background-image: url("images/mobile/image-header.jpg");
+  }
+
+  .nav-menu .menu {
+    display: none;
+  }
+
+  .hamburguer-icon {
+    display: flex;
+  }
+
+  header h1 {
+    font-size: 30px;
+    word-wrap: break-word;
+    overflow: visible;
+    animation: initial;
+    white-space: initial;
+  }
+
+  header .nav-menu {
+    padding: 15px 20px;
+  }
+
+  header .icon-arrow-down > img {
+    height: 90px;
+    bottom: initial;
+  }
+
+  .hero-section {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  section:nth-child(2),
+  section:nth-child(3) {
+    flex-direction: column;
+  }
+
+  .hero-image-egg,
+  .hero-image-glass,
+  .graphic-design,
+  .photography {
+    flex: initial;
+    height: 400px;
+  }
+
+  .hero-content {
+    height: 450px;
+    flex: initial;
+  }
+
+  .content {
+    text-align: center;
+    align-items: center;
+    padding: 20px;
+    max-width: 450px;
+  }
+
+  .content p {
+    font-size: 20px;
+  }
+
+  .client-testimonials {
+    height: 100%;
+    justify-content: initial;
+  }
+
+  .client-testimonials h2 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .clients {
+    flex-direction: column;
+  }
+
+  .client {
+    justify-content: space-around;
+    max-width: 400px;
+    height: 300px;
+    padding: 10px;
+  }
+
+  .images-section div:nth-child(1) {
+    background-image: url("images/mobile/image-gallery-milkbottles.jpg");
+  }
+
+  .images-section div:nth-child(2) {
+    background-image: url("images/mobile/image-gallery-orange.jpg");
+  }
+
+  .images-section div:nth-child(3) {
+    background-image: url("images/mobile/image-gallery-cone.jpg");
+  }
+
+  .images-section div:nth-child(4) {
+    background-image: url("images/mobile/image-gallery-sugar-cubes.jpg");
+  }
+
+  .images-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .images-section div {
+    height: 200px;
+  }
+
+  footer {
+    height: 240px;
+  }
+
+  .attribution a {
+    font-size: 14px;
+    margin: 0px 3px;
+  }
 }
 
 /* For tablet */
 
 @media only screen and (min-width: 768px) and (max-width: 979px) {
+  body {
+    background-color: blue;
+  }
 }
 
 /* For small desktop */
 
 @media only screen and (min-width: 980px) and (max-width: 1023px) {
+  body {
+    background-color: green;
+  }
 }
 
 /* For typical desktop */
 
 @media only screen and (min-width: 1024px) and (max-width: 1199px) {
+  body {
+    background-color: yellow;
+  }
 }
 
 /* For large desktop */
 
 @media only screen and (min-width: 1200px) {
+  body {
+    background-color: purple;
+  }
 }
