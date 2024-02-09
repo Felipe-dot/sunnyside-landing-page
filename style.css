@@ -57,7 +57,7 @@ header .nav-menu {
   align-items: center;
   justify-content: space-around;
   width: 100%;
-  max-width: 300px;
+  max-width: 350px;
   font-weight: 600;
 }
 
@@ -200,7 +200,7 @@ header .icon-arrow-down > img {
   display: flex;
   flex-direction: column;
   align-items: start;
-  max-width: 500px;
+  max-width: 600px;
   padding: 20px;
 }
 
@@ -373,6 +373,7 @@ header .icon-arrow-down > img {
 
 .client-name p:nth-child(2) {
   font-size: 15px;
+  margin-top: 10px;
   font-family: "Fraunces", sans-serif;
   color: var(--dark-grayish-blue);
 }
@@ -454,6 +455,10 @@ footer .social-medias a img:hover {
 .attribution a {
   color: var(--very-dark-desaturated-blue);
   margin: 0px 5px;
+}
+
+.attribution a:hover {
+  color: var(--white);
 }
 
 /* For typical mobile devices */
@@ -636,7 +641,7 @@ footer .social-medias a img:hover {
   .graphic-design,
   .photography {
     flex: initial;
-    height: 400px;
+    height: 450px;
   }
 
   .hero-content {
@@ -714,31 +719,40 @@ footer .social-medias a img:hover {
 /* For tablet */
 
 @media only screen and (min-width: 768px) and (max-width: 979px) {
-  body {
-    background-color: blue;
+  .content {
+    text-align: center;
+    align-items: center;
+    max-width: 350px;
+  }
+
+  .client {
+    max-width: 250px;
+    margin: 0px 20px;
   }
 }
 
 /* For small desktop */
 
 @media only screen and (min-width: 980px) and (max-width: 1023px) {
-  body {
-    background-color: green;
+  .content {
+    max-width: 400px;
+  }
+
+  .client {
+    max-width: 300px;
+    margin: 0px 20px;
   }
 }
 
 /* For typical desktop */
 
 @media only screen and (min-width: 1024px) and (max-width: 1199px) {
-  body {
-    background-color: yellow;
+  .content {
+    max-width: 450px;
   }
-}
 
-/* For large desktop */
-
-@media only screen and (min-width: 1200px) {
-  body {
-    background-color: purple;
+  .client {
+    max-width: 350px;
+    margin: 0px 20px;
   }
 }
